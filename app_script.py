@@ -6,7 +6,7 @@ import os
 
 root = Tk()
 root.title('SK mp3 player')
-root.iconbitmap('icons\ic.ico')
+root.iconbitmap('icons\App_icon.ico')
 root.geometry('550x430')
 root.minsize(550,430)
 root.maxsize(550,430)
@@ -139,7 +139,7 @@ pause.grid(row=0, column=2, padx=10)
 forward.grid(row=0, column=3, padx=10)
 
 # Label footer title
-head_label=Label(text="SANJAY KUMAR (C) 2020",bg='goldenrod',fg='black',font=("Times", "12", "bold italic"),borderwidth=5)
+head_label=Label(text="SANJAY KUMAR (C) 2020",bg='goldenrod',fg='black',font=("Times", "14", "bold italic"),borderwidth=5)
 head_label.pack(pady=22)
 
 # create menu
