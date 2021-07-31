@@ -5,11 +5,11 @@ import pygame
 import os
 
 root = Tk()
-root.title('SK mp3 player')
+root.title('SK Music Player')
 root.iconbitmap('icons\App_icon.ico')
-root.geometry('550x430')
-root.minsize(550,430)
-root.maxsize(550,430)
+root.geometry('600x500')
+root.minsize(550,450)
+root.maxsize(650,550)
 root.configure(bg='cyan2')
 
 # initialize pygame mixer
@@ -109,12 +109,12 @@ def pause():
          paused = True
 
 # Label header title
-head_label=Label(text="S K Music Player", bg="cyan4",fg="white",font=("Times", "21", "bold italic"),borderwidth=5, relief=SUNKEN)
+head_label=Label(text="SK MP3 Music Player", bg="cyan4",fg="white",font=("Times", "21", "bold italic"),borderwidth=5, relief=SUNKEN)
 head_label.pack(pady=10)
 
 # create playlist Box
-song_box= Listbox(root,bg="black",fg="yellow",width=80)
-song_box.pack(pady=20)
+song_box= Listbox(root,bg="black",fg="yellow",font=("Times", "14", "bold italic"),height=10,width=55)
+song_box.pack(pady=5)
 
 # player control buttons images
 play_img= PhotoImage(file='icons\play.png')
@@ -124,7 +124,7 @@ forward_img=PhotoImage(file='icons\Frwd.png')
 
 # player control frame
 control_frame=Frame(root,borderwidth=5,bg='cyan4', relief=SUNKEN)
-control_frame.pack()
+control_frame.pack(pady=10)
 
 # player control buttons 
 play=Button(control_frame,image=play_img,border=5,command=play)
@@ -139,8 +139,8 @@ pause.grid(row=0, column=2, padx=10)
 forward.grid(row=0, column=3, padx=10)
 
 # Label footer title
-head_label=Label(text="SANJAY KUMAR (C) 2020",bg='goldenrod',fg='black',font=("Times", "14", "bold italic"),borderwidth=5)
-head_label.pack(pady=22)
+head_label=Label(text="SANJAY KUMAR (C) 2020",bg='goldenrod',fg='black',font=("Times", "12", "bold italic"),borderwidth=5)
+head_label.pack(pady=30)
 
 # create menu
 my_menu=Menu(root)
