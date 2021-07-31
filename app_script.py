@@ -6,7 +6,7 @@ import os
 
 root = Tk()
 root.title('SK mp3 player')
-root.iconbitmap('ic.ico')
+root.iconbitmap('icons\ic.ico')
 root.geometry('550x430')
 root.minsize(550,430)
 root.maxsize(550,430)
@@ -17,7 +17,7 @@ pygame.mixer.init()
 
 # add song function
 def add_song():
-    song = filedialog.askopenfilename(initialdir='songs/',title="Choose A Song",filetypes=(("mp3 files","*.mp3"),))
+    song = filedialog.askopenfilename(initialdir='C:/Users/sanju/Music/',title="Choose One Song",filetypes=(("mp3 files","*.mp3"),))
     # directory name and extension
     song=os.path.basename(song)
     song=song.replace('.mp3','')
@@ -26,7 +26,7 @@ def add_song():
 
 # add all songs function
 def add_songs():
-    songs = filedialog.askopenfilenames(initialdir='songs/',title="Choose All Songs",filetypes=(("mp3 files","*.mp3"),)) 
+    songs = filedialog.askopenfilenames(initialdir='C:/Users/sanju/Music/',title="Choose Many Songs",filetypes=(("mp3 files","*.mp3"),)) 
     # directory name and extension
     # loop through song list and replace directory name and extension
     for song in songs:
@@ -38,7 +38,7 @@ def add_songs():
 # play button
 def play():
     song=song_box.get(ACTIVE)
-    song=f'C:/Users/sanju/OneDrive/Desktop/songs/{song}.mp3'
+    song=f'C:/Users/sanju/Music/{song}.mp3'
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
 
@@ -54,7 +54,7 @@ def forward():
     # adding one to current song no.
     next_song=next_song[0]+1
     song=song_box.get(next_song)
-    song=f'C:/Users/sanju/OneDrive/Desktop/songs/{song}.mp3'
+    song=f'C:/Users/sanju/Music/{song}.mp3'
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
     
@@ -70,7 +70,7 @@ def backward():
     # substract one to current song no.
     prev_song=prev_song[0]-1
     song=song_box.get(prev_song)
-    song=f'C:/Users/sanju/OneDrive/Desktop/songs/{song}.mp3'
+    song=f'C:/Users/sanju/Music/{song}.mp3'
     pygame.mixer.music.load(song)
     pygame.mixer.music.play(loops=0)
 
@@ -117,11 +117,10 @@ song_box= Listbox(root,bg="black",fg="yellow",width=80)
 song_box.pack(pady=20)
 
 # player control buttons images
-play_img= PhotoImage(file='play.png')
-pause_img=PhotoImage(file='pause.png')
-backward_img=PhotoImage(file='back.png')
-forward_img=PhotoImage(file='forward.png')
-#stop_img=PhotoImage(file='stop.png')
+play_img= PhotoImage(file='icons\play.png')
+pause_img=PhotoImage(file='icons\pause.png')
+backward_img=PhotoImage(file="icons\Prev.png")
+forward_img=PhotoImage(file='icons\Frwd.png')
 
 # player control frame
 control_frame=Frame(root,borderwidth=5,bg='cyan4', relief=SUNKEN)
@@ -132,14 +131,12 @@ play=Button(control_frame,image=play_img,border=5,command=play)
 pause=Button(control_frame,image=pause_img,border=5,command=pause)
 backward=Button(control_frame,image=backward_img,border=5,command=backward)
 forward=Button(control_frame,image=forward_img,border=5,command=forward)
-#stop=Button(control_frame,image=stop_img,border=0,command=stop)
 
 # position of buttons
 backward.grid(row=0, column=1, padx=10)
 play.grid(row=0, column=0, padx=10)
 pause.grid(row=0, column=2, padx=10)
 forward.grid(row=0, column=3, padx=10)
-#stop.grid(row=0, column=4, padx=10)
 
 # Label footer title
 head_label=Label(text="SANJAY KUMAR (C) 2020",bg='goldenrod',fg='black',font=("Times", "12", "bold italic"),borderwidth=5)
