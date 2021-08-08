@@ -1,4 +1,38 @@
-# Mp3-music-player
-This is a simple Music player which allow us to load one or many mp3 songs and control them with buttons like play, pause, forward, and backward.
-The GUI of the Music player is developed using Python tkinter library.
-The various other module used in this project are os and pygame.
+
+![Logo](https://raw.githubusercontent.com/sanju6890/Mp3-music-player/master/icons/app_icon.ico)
+
+    
+# Mp3-Music-Player
+This is a GUI based desktop application which is used to play .mp3 songs present on the local system.
+  
+
+
+## Application Screenshot
+![Screenshot](https://raw.githubusercontent.com/sanju6890/Mp3-music-player/master/icons/App%20Screenshot.png)
+
+    
+## Features
+
+- Display screen to show the added songs list
+- Highlight the current playing song in the playlist
+- Add One/Many songs to the playlist
+- Delete One/Many songs from the playlist
+- Control buttons like play, pause, previous, & next
+
+  
+## Tech Stack
+
+**🖥 Frontend:** Python tkinter
+
+**🔊 Sound library:** Pygame
+
+**⚙ System library:** Python OS module
+
+  
+## Demo
+Link to YouTube demo video: https://youtu.be/uue-4fq7Hl4
+## Author
+
+- [@sanju6890](https://www.github.com/sanju6890)
+
+  
