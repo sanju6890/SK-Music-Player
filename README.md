@@ -2,7 +2,7 @@
 ![Logo](https://raw.githubusercontent.com/sanju6890/Mp3-music-player/master/icons/app_icon.ico)
 
     
-# Mp3-Music-Player
+# SK-Music-Player
 This is a GUI based desktop application which is used to play .mp3 songs present on the local system.
   
 
